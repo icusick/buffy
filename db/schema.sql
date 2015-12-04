@@ -1,8 +1,8 @@
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS categories;
 DROP TABLE IF EXISTS articles;
-DROP TABLE IF EXISTS subtopics;
-DROP TABLE IF EXISTS subtopics_users;
+DROP TABLE IF EXISTS quotes;
+DROP TABLE IF EXISTS articles_users;
 
 CREATE TABLE users (
 	id INTEGER PRIMARY KEY,
@@ -25,6 +25,7 @@ CREATE TABLE articles (
 	bio VARCHAR,
 	antagonist VARCHAR,
 	special_powers VARCHAR,
+	minions VARCHAR,
 	buffy_quarrel VARCHAR,
 	demise VARCHAR,
 	category_id INTEGER REFERENCES categories(id) 
