@@ -19,7 +19,10 @@
 	 <h2> <%= @article.minions %> </h2>
 <% end %>
 <h1>Authors: </h1>
-	<h2> <%= @article.users.select(:name) %> </h2>
+	 <% @article.users.each do |user| %> 
+	 	<h2><%= user.name %></h2>
+	 <% end %>
+	
 
 
 	<a href="/articles/<%= @article.id %>/edit">Edit</a>

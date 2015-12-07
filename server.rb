@@ -80,7 +80,7 @@ module App
    patch "/articles/:id" do 
     article = Article.find(params[:id])
     article.update({title: params["title"], bio: params["bio"], antagonist: params["antagonist"], special_powers: params["special_powers"], minions: params["minions"], buffy_quarrel: params["buffy_quarrel"], demise: params["demise"], category_id: params["category_id"]})
-    newArticle.users.push(User.find(session[:user_id]))
+    article.users.push(User.find(session[:user_id]))
     redirect to "/"
    end
    
