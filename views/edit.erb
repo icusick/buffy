@@ -1,0 +1,14 @@
+
+
+<form method="POST" action="/articles/<%= @article.id %>/edit" >
+	<input type="hidden" name="_method" value="patch">
+	<input type="text" name="title" value="<%= @article.title %>">
+	<input type="text" name="plot" value="<%= @article.plot %>">
+	<input type="text" name="bio" value="<%= @article.bio %>">
+	<input type="text" name="antagonist" value="<%= @article.antagonist %>">
+	<input type="text" name="special_powers" value="<%= @article.special_powers %>">
+	<input type="text" name="minions" value="<%= @article.minions %>">
+	<input type="text" name="buffy_quarrel" value="<%= @article.buffy_quarrel %>">
+	<input type="text" name="demise" value="<%= @article.demise %>">
+	<input type="text" name="category_id" value="<%= @article.category_id %>">
+</form>

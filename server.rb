@@ -1,6 +1,7 @@
 module App
 
   class Server < Sinatra::Base
+   set :method_override, true
    enable :sessions
 
    get "/" do 
@@ -46,9 +47,7 @@ module App
    end
    
    get "/episodes" do
-   	# find everything in article table with a category of one and print the title
-   	# @path = "articles"
-   	@user = User.find(session[:user_id]) if session[:user_id]
+ 	@user = User.find(session[:user_id]) if session[:user_id]
    	@articles = Article.where(:category_id => 1)
    	erb :list
    end
@@ -60,56 +59,40 @@ module App
    # maybe it would be better to have four different "new" erbs so that when you went to the new form there wouldn't be all these sections that you aren't going to fill out. right now i have just the one to cut down on the list of gets and posts
    
    post "/articles" do 
-   	Article.create({title: params["title"], bio: params["bio"], antagonist: params["antagonist"], special_powers: params["special_powers"], minions: params["minions"], buffy_quarrel: params["buffy_quarrel"], demise: params["demise"], category_id: params["category_id"]})
+   	newArticle = Article.create({title: params["title"], bio: params["bio"], antagonist: params["antagonist"], special_powers: params["special_powers"], minions: params["minions"], buffy_quarrel: params["buffy_quarrel"], demise: params["demise"], category_id: params["category_id"]})
+   	newArticle.users.push(session[:user_id])
    	redirect to "/"
    end
    
    get "/articles/:id" do
-   	# print out the title of an episode(which is the title of the article) and then everything from the subtopics table whose article_id corresponds to the article
-   	
    	id = params[:id]
-   	
    	@article = Article.find(id)
-   	# @subtopics = Subtopic.where[:article_id = :id]
+   	
    	erb :details
    end
 
    get "/articles/:id/edit" do 
-   	erb :update
+   	@article = Article.find(params[:id])
+   	erb :edit
    end
 
    patch "/articles/:id" do 
-
+    article = Article.find(params[:id])
+    article.update({{title: params["title"], bio: params["bio"], antagonist: params["antagonist"], special_powers: params["special_powers"], minions: params["minions"], buffy_quarrel: params["buffy_quarrel"], demise: params["demise"], category_id: params["category_id"]})
+    redirect to "/"
    end
    
-
    get "/characters" do
-   	# @path = "characters"
    	@user = User.find(session[:user_id]) if session[:user_id]
    	@articles = Article.where(:category_id => 2)
    	erb :list
    end
 
-   
-   
-   # get "/characters/:id" do
-   # 	id = params[:id]
-  	# @article = Article.find(id)
-   # 	erb :details
-   # end
-
    get "/demons" do 
-   	# @path= "demons"
-   	@user = User.find(session[:user_id]) if session[:user_id]
+  	@user = User.find(session[:user_id]) if session[:user_id]
    	@articles = Article.where(:category_id => 3)
    	erb :list
    end
-
-   # get "/demons/:id" do
-   # 	id = params[:id]
-   # 	@article = Article.find(id)
-   # 	erb :details
-   # end
 
    get "/apocolypses" do 
    	# @path = "apocolypses"
@@ -118,14 +101,6 @@ module App
    	erb :list
    end 
 
-   # get "/apocolypses/:id" do
-   # 	id = params[:id]
-   # 	@article = Article.find(id)
-   # 	erb :details
-   # end
-  
-
-
-
+ 
   end
 end

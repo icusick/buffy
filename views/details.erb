@@ -21,6 +21,5 @@
 <h1>Authors: </h1>
 	<h2> <%= @article.users.name %> </h2>
 
-<% if @user %>
-<a href"/articles/#{@article.id}/edit">Edit</a>
-<% end %>
+
+	<a href="/articles/<%= @article.id %>/edit">Edit</a>
