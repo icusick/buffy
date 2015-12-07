@@ -1,6 +1,6 @@
 .wrapper {
 	background: url(https://monsterpopcorn.files.wordpress.com/2012/05/buffy-1.jpg);
-	height: 800px;
+	height: 1000px;
 	color: white;
 	font-family: helvetica;
 	text-align: center;
@@ -43,6 +43,25 @@
 	margin-right: 5px;
 }
 
+#editform {
+	
+}
+
+#input {
+	width: 550px;
+	height: 50px;
+	background: rgba(255, 255, 255, 0.5);
+	color: black;
+}
+
+#inputSmall {
+	background: rgba(255, 255, 255, 0.5);
+	color: black;
+}
+
+.newForm {
+	color: black;
+}
 
 li {
 	color: white;

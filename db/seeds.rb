@@ -20,9 +20,9 @@ fill_articles = [
 	{title: "The Pack", plot: "Xander and some mean kids get turned into hyenas and eat the principal.", antagonist: "guy at the zoo who works the hyena mojo", category_id: 1},
 	{title: "Angel", plot: "Buffy makes out with Angel and finds out he's a vampire.", antagonist: "The Three: a group of vampire mercenaries hired by the Master to take out Buffy.", category_id: 1},
 	{title: "I Robot...You, Jane", plot: "Willow meets a guy in a chatroom who turns out to be an internet-demon", antagonist: "Moloch the Corrupter", category_id: 1},
-	{title: "Out of Mind, Out of Sight", category_id: 1},
-	{title: "Prophecy Girl", category_id: 1},
-	{title: "School Hard", category_id: 1},
+	{title: "Out of Mind, Out of Sight", plot: "girl becomes invisible after being ignored by her teachers and classmates. on the hellmouth, fears become reality.", antagonist: "georgia, the invisible girl, but also everyone, kind of, for driving her to this point.", category_id: 1},
+	{title: "Prophecy Girl", plot: "Buffy fights the master, dying in the process, and then, in usual buffy-form, flips the prophecy on its head, comes back to life, defeats the master, activates a SECOND slayer, an unprecedented occurrance in slayer history.", antagonist: "the Master", category_id: 1},
+	{title: "School Hard", plot: "Spike comes to town. All you need to know.", antagonist: "Spike", category_id: 1},
 	{title: "Anya", bio: "Former vengenance demon. Gets marooned in Sunnydale as a human teenage girl after she loses her powersource. Eventually starts dating Xander. Best character.", category_id: 2},
 	{title: "Buffy", bio: "Slayer", special_powers: "Super-strength", category_id: 2}, 
 	{title: "Willow", bio: "Buffy's best friend and most powerful ally. Former nerd. Current witch.", special_powers: "Witch", category_id: 2}, 
@@ -32,8 +32,8 @@ fill_articles = [
 	{title: "Angel", bio: "Vampire cursed by gypsies with a soul so that he could feel the guilt from centuries of inflicting torture. After a few decades of eating rats in an alley-way, crippled by guilt and covered in his own filth, he get his act together to embark on a journey of redemption. In so doing he meets the Slayer, Buffy, they fall in love, and when they finally do it he loses his soul, tries to end the world, fails, and gets sucked into hell (see 'Acathla' in the Apocolypses category). Apparently there was a loophole in the soul-curse which mandated that if Angel were to experience one moment of true happiness, he would lose his soul again. Sex with Buffy = pure happiness.", category_id: 2},
 	{title: "Principal Schneider", bio: "Buffy's principal. Has it out for her.", category_id: 2},
 	{title: "Spike", bio: "Nickname: William the Bloody. Super bad-ass vampire. Hilarious, attractive despite his diminutive size and platinum blonde hair. Appears for the first time in Season 2 as the big bad but that role is taken by Angel after he loses his soul. Winds up being a grudging ally of Buffy to thwart Angel's proposterous plans to end the world.", category_id: 2},
-	{title: "The Gentemen", bio: "Group of demons who travel from town to town to collect hearts. They steal the voices from the entire town so their victims can't scream. They need seven hearts before they can move on.", special_powers: "They float around and get their straight-jacketed minions to do their dirty work.", minions: "Straight-jacketed guys.", category_id: 3},
-	{title: "Clem", bio: "Loose-skinned demon. Friend of Buffy's, eats kittens.", special_powers: "None", category_id: 3},
+	{title: "The Gentemen", bio: "Group of demons who travel from town to town to collect hearts. They steal the voices from the entire town so their victims can't scream. They need seven hearts before they can move on.", special_powers: "They float around and get their straight-jacketed minions to do their dirty work.", minions: "Straight-jacketed guys.", buffy_quarrel: "they want to cut out people's hearts", demise: "buffy crushes a box, as per the fairy tale, get her voice back and screams which for whatever reasons makes them explode", category_id: 3},
+	{title: "Clem", bio: "Loose-skinned demon. Friend of Buffy's, eats kittens.", special_powers: "None", buffy_quarrel: "None. They're pals.", demise: "still kickin", category_id: 3},
 	{title: "Acathla", plot: "A demon sent earth to suck the world into hell. A noble knight froze him. A worthy so and so can open him with his blodd black blah blah", category_id: 4}
 ]
 

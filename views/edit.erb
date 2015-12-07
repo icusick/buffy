@@ -2,15 +2,42 @@
 <div id="editform">
 <form method="POST" action="/articles/<%= @article.id %>" >
 	<input type="hidden" name="_method" value="patch">
-	<input type="text" name="title" value="<%= @article.title %>">
-	<input type="text" name="plot" value="<%= @article.plot %>">
-	<input type="text" name="bio" value="<%= @article.bio %>">
-	<input type="text" name="antagonist" value="<%= @article.antagonist %>">
-	<input type="text" name="special_powers" value="<%= @article.special_powers %>">
-	<input type="text" name="minions" value="<%= @article.minions %>">
-	<input type="text" name="buffy_quarrel" value="<%= @article.buffy_quarrel %>">
-	<input type="text" name="demise" value="<%= @article.demise %>">
-	<input type="text" name="category_id" value="<%= @article.category_id %>">
+	<label for="title">Title:</label> 
+	<br>
+	<input type="text" name="title" id="inputSmall" value="<%= @article.title %>">
+	<br>
+	<label for="plot">Plot:</label>
+	<br>
+	<input type="text" name="plot" id="input" value="<%= @article.plot %>">
+	<br>
+	<label for="bio">Biography:</label>
+	<br>
+	<input type="text" name="bio" id="input" value="<%= @article.bio %>">
+	<br>
+	<label for="antagonist">Antagonist:</label>
+	<br>
+	<input type="text" name="antagonist" id="inputSmall" value="<%= @article.antagonist %>">
+	<br>
+	<label for="special_powers">Special Powers:</label>
+	<br>
+	<input type="text" name="special_powers" id="input" value="<%= @article.special_powers %>">
+	<br>
+	<label for="minions">Minions:</label>
+	<br>
+	<input type="text" name="minions" id="input" value="<%= @article.minions %>">
+	<br>
+	<label for="buffy_quarrel">Quarrel With Buffy:</label>
+	<br>
+	<input type="text" name="buffy_quarrel" id="input" value="<%= @article.buffy_quarrel %>">
+	<br>
+	<label for="demise">Death:</label>
+	<br>
+	<input type="text" name="demise" id="input" value="<%= @article.demise %>">
+	<br>
+	<label for="category_id">Category ID:</label>
+	<br>
+	<input type="text" name="category_id" id="inputSmall" value="<%= @article.category_id %>">
 	<button type="submit" value="update">Submit Changes</button>
 </form>
 </div>
+
