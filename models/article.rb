@@ -1,5 +1,6 @@
 class Article < ActiveRecord::Base
 	belongs_to :category
-	has_many :subtopics
+	
+	has_and_belongs_to_many :users
 
 end

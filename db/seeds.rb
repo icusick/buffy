@@ -30,15 +30,15 @@ fill_articles = [
 	{title: "Acathla", plot: "A demon sent earth to suck the world into hell. A noble knight froze him. A worthy so and so can open him with his blodd black blah blah", category_id: 4}
 ]
 
-fill_quotes = [
-	{content: "mmmm cookies"; article id (dawn) }, 
-	{ content: "don't show me beautiful things i can't have"}, 
-	{"the last time i tortured someone they did't even have chainsaws"},  {content: "some principals want you to think of them as your pals. i'd like you to think of me as your judge jury and executioner." }
-	{content: "Giles, care? I'm putting my life on the line battling the 
-undead. Look, I broke a nail, okay? I'm wearing a press-on. The least 
-you could do is exhibit some casual interest. You could go, 'hmm'.", article_id: 11 },  
-	{content: "i fed off a flower person and spent the next six hours looking at my hand"}
-]
+# fill_quotes = [
+# 	{content: "mmmm cookies"; article id (dawn) }, 
+# 	{ content: "don't show me beautiful things i can't have"}, 
+# 	{"the last time i tortured someone they did't even have chainsaws"},  {content: "some principals want you to think of them as your pals. i'd like you to think of me as your judge jury and executioner." }
+# 	{content: "Giles, care? I'm putting my life on the line battling the 
+# undead. Look, I broke a nail, okay? I'm wearing a press-on. The least 
+# you could do is exhibit some casual interest. You could go, 'hmm'.", article_id: 11 },  
+# 	{content: "i fed off a flower person and spent the next six hours looking at my hand"}
+# ]
 
 # articles (
 # 	id INTEGER PRIMARY KEY,
@@ -65,13 +65,13 @@ Category.create(fill_categories)
 Article.create(fill_articles)
 # Subtopic.create(fill_subtopics)
 
-maceda 
-the queller
-lohesh
-separvra demon 
+# maceda 
+# the queller
+# lohesh
+# separvra demon 
 
 
-https://www.youtube.com/watch?v=I-8DIjgIpfI out for a walk wbith
+# https://www.youtube.com/watch?v=I-8DIjgIpfI out for a walk wbith
 
 
 

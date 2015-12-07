@@ -1,8 +1,12 @@
-<a href="/articles/new">Add an article</a>
+
 <% @articles.each do |article| %>
 	<li class="mainList"> 
 		<a href="/articles/<%= article.id %>" >
 		<%= article.title %></a> 
 	</li>
 
+<% end %>
+
+<% if @user %>
+	<a href="/articles/new">Add an article</a>
 <% end %>

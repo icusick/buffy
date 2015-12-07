@@ -18,5 +18,9 @@
 	<h1> Minions: </h1>
 	 <h2> <%= @article.minions %> </h2>
 <% end %>
+<h1>Authors: </h1>
+	<h2> <%= @article.users.name %> </h2>
 
-<a href"/articles/:id/edit">Edit</a>
+<% if @user %>
+<a href"/articles/#{@article.id}/edit">Edit</a>
+<% end %>

@@ -1,19 +1,18 @@
 module App
 
   class Server < Sinatra::Base
-   
+   enable :sessions
+
    get "/" do 
    	erb :index
    end 
 
- 
-   
    get "/login" do
    	erb :login
    end
  
    post "/sessions" do
-      user = User.find_by({name: params[:name]}).try(:authenticate, params[:password])
+      user = User.find_by({name: params[:name]}) #.try(:authenticate, params[:password])
       if user
         session[:user_id] = user.id
         redirect to "/"
@@ -22,11 +21,26 @@ module App
       end
     end
    
-   get "/users/new" do 
-
+   get "/users" do 
+   	@users = User.all
+   	erb :users
    end
    
+   get "/users/new" do 
+   	erb :new_user
+   end
+
+   	post "/users" do
+      @user = User.create({
+    	name: params["name"],
+    	# password: params["password"],
+    	# password_confirmation: params["password_confirmation"]
+    	})
+      redirect to "/"
+    end
+   
    get "/articles" do
+   	@user = User.find(session[:user_id]) if session[:user_id]
    	@articles = Article.all
    	erb :list
    end
@@ -34,6 +48,7 @@ module App
    get "/episodes" do
    	# find everything in article table with a category of one and print the title
    	# @path = "articles"
+   	@user = User.find(session[:user_id]) if session[:user_id]
    	@articles = Article.where(:category_id => 1)
    	erb :list
    end
@@ -51,6 +66,7 @@ module App
    
    get "/articles/:id" do
    	# print out the title of an episode(which is the title of the article) and then everything from the subtopics table whose article_id corresponds to the article
+   	
    	id = params[:id]
    	
    	@article = Article.find(id)
@@ -69,6 +85,7 @@ module App
 
    get "/characters" do
    	# @path = "characters"
+   	@user = User.find(session[:user_id]) if session[:user_id]
    	@articles = Article.where(:category_id => 2)
    	erb :list
    end
@@ -83,6 +100,7 @@ module App
 
    get "/demons" do 
    	# @path= "demons"
+   	@user = User.find(session[:user_id]) if session[:user_id]
    	@articles = Article.where(:category_id => 3)
    	erb :list
    end
@@ -95,6 +113,7 @@ module App
 
    get "/apocolypses" do 
    	# @path = "apocolypses"
+   	@user = User.find(session[:user_id]) if session[:user_id]
    	@articles = Article.where(:category_id => 4)
    	erb :list
    end 
