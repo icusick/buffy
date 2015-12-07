@@ -1,3 +1,4 @@
+<div id="details">
 <% if @article.title %>
 	<h1> Name: </h1>
 	 <h2> <%= @article.title %> </h2>
@@ -22,7 +23,6 @@
 	 <% @article.users.each do |user| %> 
 	 	<h2><%= user.name %></h2>
 	 <% end %>
-	
 
-
-	<a href="/articles/<%= @article.id %>/edit">Edit</a>
+<a href="/articles/<%= @article.id %>/edit">Edit</a>
+</div>

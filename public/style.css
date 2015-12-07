@@ -3,9 +3,44 @@
 	height: 800px;
 	color: white;
 	font-family: helvetica;
+	text-align: center;
+
+}
+
+#welcome {
+	font-size: 40px;
+}
+
+#details {
+	border-color: white;
+	background-color: rgba(255, 255, 255, 0.5);
+	width: 400px;
+	margin-left: 450px;
+	text-align: left;
+	color: black;
+}
+
+#index {
+	margin-top: 200px;
 }
 
 li {
 	color: white;
 	font-family: helvetica;
+}
+
+h1 {
+	font-size: 24px;
+
+}
+
+h2 {
+	font-size: 20px;
+	font-weight: lighter;
+}
+
+a {
+	font-family: helvetica;
+	color: white;
+	font-size: 18px;
 }
