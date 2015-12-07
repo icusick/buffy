@@ -1,5 +1,5 @@
 
-
+<div id="editform">
 <form method="POST" action="/articles/<%= @article.id %>" >
 	<input type="hidden" name="_method" value="patch">
 	<input type="text" name="title" value="<%= @article.title %>">
@@ -13,3 +13,4 @@
 	<input type="text" name="category_id" value="<%= @article.category_id %>">
 	<button type="submit" value="update">Submit Changes</button>
 </form>
+</div>

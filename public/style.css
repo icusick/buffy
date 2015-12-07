@@ -21,16 +21,38 @@
 }
 
 #index {
-	margin-top: 200px;
+	margin-top: 400px;
 }
+
+#login {
+	background: url(http://images2.fanpop.com/images/photos/3000000/Willow-Oz-season-3-buffy-the-vampire-slayer-3010338-1000-606.jpg);
+	height: 800px;
+}
+
+#signup {
+	background: url(http://vignette1.wikia.nocookie.net/buffy/images/1/17/Older_and_far_away_.jpg);
+	height: 800px;
+}
+
+#indexA { 
+	border: solid;
+	border-width: 2px;
+	padding: 5px;
+	border-color: white;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
 
 li {
 	color: white;
 	font-family: helvetica;
+	list-style-type: none;
 }
 
 h1 {
 	font-size: 24px;
+	font-weight: normal;
 
 }
 
@@ -43,4 +65,12 @@ a {
 	font-family: helvetica;
 	color: white;
 	font-size: 18px;
+	text-decoration: none;
 }
+
+
+
+
+
+
+

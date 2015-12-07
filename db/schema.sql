@@ -3,9 +3,11 @@ DROP TABLE IF EXISTS categories;
 DROP TABLE IF EXISTS articles;
 DROP TABLE IF EXISTS quotes;
 DROP TABLE IF EXISTS articles_users;
+DROP TABLE IF EXISTS articles_quotes;
 
 CREATE TABLE users (
 	id INTEGER PRIMARY KEY,
+	password_digest VARCHAR,
 	name VARCHAR
 );
 
@@ -19,8 +21,8 @@ CREATE TABLE categories (
 CREATE TABLE articles (
 	id INTEGER PRIMARY KEY,
 	title VARCHAR,
-	create_date DATE,
-	update_date DATE,
+	create_date DATETIME,
+	update_date DATETIME,
 	plot VARCHAR,
 	bio VARCHAR,
 	antagonist VARCHAR,
@@ -33,12 +35,16 @@ CREATE TABLE articles (
 
 CREATE TABLE quotes (
 	id INTEGER PRIMARY KEY,
-	content VARCHAR,
-	article_id INTEGER REFERENCES articles(id) 
+	content VARCHAR
+);
+
+CREATE TABLE articles_quotes (
+	article_id REFERENCES articles(id),
+	quote_id REFERENCES quotes(id)
 );
 
 CREATE TABLE articles_users (
-	article_id REFERENCES subtopics(id),
+	article_id REFERENCES articles(id),
 	user_id REFERENCES users(id)
 );
 

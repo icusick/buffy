@@ -1,30 +1,50 @@
 <div id="details">
-<% if @article.title %>
+
 	<h1> Name: </h1>
 	 <h2> <%= @article.title %> </h2>
-<% end %>
-<% if @article.plot %>
+
+<% if @article.category_id == 1 %>
 	<h1> Plot: </h1> 
-	 <h2> <%= @article.plot %> </h2>
+	 <h2> <%= $markdown.render(@article.plot) %> </h2>
 <% end %>
-<% if @article.bio %>
+<% if @article.category_id == 2 || @article.category_id == 3 %>
 	<h1> Biography: </h1> 
-	 <h2> <%= @article.bio %> </h2>
+	 <h2> <%= $markdown.render(@article.bio) %> </h2>
 <% end %>
-<% if @article.special_powers %> 
+<% if @article.category_id == 2 %>
+	<h1> Big Bad: </h1>
+	<h2> <%= @article.antagonist %> </h2>
+<% end %>
+<% if @article.category_id == 2 || @article.category_id == 3 %> 
 	<h1> Special Powers: </h1>
-	 <h2> <%= @article.special_powers %> </h2>
+	 <h2> <%= $markdown.render(@article.special_powers) %> </h2>
 <% end %>
-<% if @article.minions %>
+<% if @article.category_id == 2 || @article.category_id == 3 %> 
 	<h1> Minions: </h1>
 	 <h2> <%= @article.minions %> </h2>
+<% end %>
+<% if @article.category_id == 3 %>
+	<h1> Quarrel with Buffy: </h1>
+	 <h2> <%= $markdown.render(@article.buffy_quarrel) %> </h2>
+<% end %>
+<% if @article.category_id == 2 || @article.category_id == 3 %>
+	<h1> Death: </h1>
+	 <h2> <%= $markdown.render(@article.demise) %> </h2>
 <% end %>
 <h1>Authors: </h1>
 	 <% @article.users.each do |user| %> 
 	 	<h2><%= user.name %></h2>
 	 <% end %>
+<h1>Created at: </h1>
+	<h2> <%= @article.create_date %></h2>
+<h1>Last update: </h1>
+	<h2> <%= @article.update_date %></h2>
+<h1>Quotes: </h1>
+	<% @article.quotes.each do |quote| %>
+		<h2><%= quote.content %></h2>
+	<% end %>
 
 <a href="/articles/<%= @article.id %>/edit">Edit</a>
 </div>
 
-<!-- instead of <%  @article.special_powers %>  i can write if @category_id = 2 or 3....maybe i can do the same in the edit.erb for the inputs end -->
+
