@@ -1,0 +1,20 @@
+<% if @article.title %>
+	<h1> Name: </h1>
+	 <h2> <%= @article.title %> </h2>
+<% end %>
+<% if @article.plot %>
+	<h1> Plot: </h1> 
+	 <h2> <%= @article.plot %> </h2>
+<% end %>
+<% if @article.bio %>
+	<h1> Biography: </h1> 
+	 <h2> <%= @article.bio %> </h2>
+<% end %>
+<% if @article.special_powers %> 
+	<h1> Special Powers: </h1>
+	 <h2> <%= @article.special_powers %> </h2>
+<% end %>
+<% if @article.minions %>
+	<h1> Minions: </h1>
+	 <h2> <%= @article.minions %> </h2>
+<% end %>

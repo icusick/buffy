@@ -25,8 +25,19 @@ fill_articles = [
 	{title: "Willow", bio: "Buffy's best friend and most powerful ally. Former nerd. Current witch.", special_powers: "Witch", category_id: 2}, 
 	{title: "Xander", bio: "Buffy's second best friend. Lease powerful ally.", special_powers: "Occasionally pretty funny. Always a dick. Really likes boobs.", category_id: 2},
 	{title: "Giles", bio: "Buffy's watcher.", special_powers: "Book guy. Knows everything about mystical shit.", category_id: 2}, 
-	{title: "The Genteman", bio: "Group of demons who travel from town to town to collect hearts. They steal the voices from the entire town so their victims can't scream. They need seven hearts before they can move on.", special_powers: "They float around and get their straight-jacketed minions to do their dirty work.", minions: "Straight-jacketed guys.", category_id: 3},
-	{title: "Clem", bio: "Loose-skinned demon. Friend of Buffy's, eats kittens.", special_powers: "None", category_id: 3}
+	{title: "The Gentemen", bio: "Group of demons who travel from town to town to collect hearts. They steal the voices from the entire town so their victims can't scream. They need seven hearts before they can move on.", special_powers: "They float around and get their straight-jacketed minions to do their dirty work.", minions: "Straight-jacketed guys.", category_id: 3},
+	{title: "Clem", bio: "Loose-skinned demon. Friend of Buffy's, eats kittens.", special_powers: "None", category_id: 3},
+	{title: "Acathla", plot: "A demon sent earth to suck the world into hell. A noble knight froze him. A worthy so and so can open him with his blodd black blah blah", category_id: 4}
+]
+
+fill_quotes = [
+	{content: "mmmm cookies"; article id (dawn) }, 
+	{ content: "don't show me beautiful things i can't have"}, 
+	{"the last time i tortured someone they did't even have chainsaws"},  {content: "some principals want you to think of them as your pals. i'd like you to think of me as your judge jury and executioner." }
+	{content: "Giles, care? I'm putting my life on the line battling the 
+undead. Look, I broke a nail, okay? I'm wearing a press-on. The least 
+you could do is exhibit some casual interest. You could go, 'hmm'.", article_id: 11 },  
+	{content: "i fed off a flower person and spent the next six hours looking at my hand"}
 ]
 
 # articles (
@@ -54,6 +65,13 @@ Category.create(fill_categories)
 Article.create(fill_articles)
 # Subtopic.create(fill_subtopics)
 
+maceda 
+the queller
+lohesh
+separvra demon 
+
+
+https://www.youtube.com/watch?v=I-8DIjgIpfI out for a walk wbith
 
 
 
