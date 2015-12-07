@@ -1,7 +1,7 @@
-
+<a href="/articles/new">Add an article</a>
 <% @articles.each do |article| %>
 	<li class="mainList"> 
-		<a href="/<%= @path %>/<%= article.id %>" >
+		<a href="/articles/<%= article.id %>" >
 		<%= article.title %></a> 
 	</li>
 
