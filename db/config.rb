@@ -16,6 +16,7 @@ else
   :adapter => 'sqlite3',
   :database =>  'db/database.sqlite3'
 )
+end
 
 Dir.glob("models/*.rb").each do |path|
   require_relative "../#{path}"
