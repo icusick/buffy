@@ -6,12 +6,25 @@ module App
    	erb :index
    end 
 
-   # get "/categories/:id/articles" do
-   # 	id = params[:id]
-   # 	# @category = Category.find(id)
-   # 	@article = Article.where(:category_id => id)
-   # 	erb :list
-   # end
+ 
+   
+   get "/login" do
+   	erb :login
+   end
+ 
+   post "/sessions" do
+      user = User.find_by({name: params[:name]}).try(:authenticate, params[:password])
+      if user
+        session[:user_id] = user.id
+        redirect to "/"
+      else
+        redirect to "/login"
+      end
+    end
+   
+   get "/users/new" do 
+
+   end
    
    get "/articles" do
    	@articles = Article.all
@@ -44,6 +57,15 @@ module App
    	# @subtopics = Subtopic.where[:article_id = :id]
    	erb :details
    end
+
+   get "/articles/:id/edit" do 
+   	erb :update
+   end
+
+   patch "/articles/:id" do 
+
+   end
+   
 
    get "/characters" do
    	# @path = "characters"
