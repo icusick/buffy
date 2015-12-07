@@ -16,4 +16,4 @@ class CreateCategories <ActiveRecord::Migration
 	end 
 end
 
-CreateUsers.migrate(:up)
+CreateCategories.migrate(:up)
