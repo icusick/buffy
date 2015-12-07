@@ -1,6 +1,6 @@
 
 
-<form method="POST" action="/articles/<%= @article.id %>/edit" >
+<form method="POST" action="/articles/<%= @article.id %>" >
 	<input type="hidden" name="_method" value="patch">
 	<input type="text" name="title" value="<%= @article.title %>">
 	<input type="text" name="plot" value="<%= @article.plot %>">
@@ -11,4 +11,5 @@
 	<input type="text" name="buffy_quarrel" value="<%= @article.buffy_quarrel %>">
 	<input type="text" name="demise" value="<%= @article.demise %>">
 	<input type="text" name="category_id" value="<%= @article.category_id %>">
+	<button type="submit" value="update">Submit Changes</button>
 </form>

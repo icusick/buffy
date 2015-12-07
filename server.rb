@@ -3,6 +3,7 @@ module App
   class Server < Sinatra::Base
    set :method_override, true
    enable :sessions
+   $markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
 
    get "/" do 
    	erb :index
@@ -60,7 +61,7 @@ module App
    
    post "/articles" do 
    	newArticle = Article.create({title: params["title"], bio: params["bio"], antagonist: params["antagonist"], special_powers: params["special_powers"], minions: params["minions"], buffy_quarrel: params["buffy_quarrel"], demise: params["demise"], category_id: params["category_id"]})
-   	newArticle.users.push(session[:user_id])
+   	newArticle.users.push(User.find(session[:user_id]))
    	redirect to "/"
    end
    
@@ -78,7 +79,8 @@ module App
 
    patch "/articles/:id" do 
     article = Article.find(params[:id])
-    article.update({{title: params["title"], bio: params["bio"], antagonist: params["antagonist"], special_powers: params["special_powers"], minions: params["minions"], buffy_quarrel: params["buffy_quarrel"], demise: params["demise"], category_id: params["category_id"]})
+    article.update({title: params["title"], bio: params["bio"], antagonist: params["antagonist"], special_powers: params["special_powers"], minions: params["minions"], buffy_quarrel: params["buffy_quarrel"], demise: params["demise"], category_id: params["category_id"]})
+    newArticle.users.push(User.find(session[:user_id]))
     redirect to "/"
    end
    
