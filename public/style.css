@@ -1,20 +1,26 @@
 .wrapper {
 	background: url(https://monsterpopcorn.files.wordpress.com/2012/05/buffy-1.jpg);
-	height: 1000px;
+	height: 2000px;
 	color: white;
 	font-family: helvetica;
 	text-align: center;
-
+	position: relative;
 }
 
 #welcome {
 	font-size: 40px;
 }
 
+#detailWrap {
+	background: url(https://p.dreamwidth.org/92d38ad5b472/-/pics.livejournal.com/katekat1010/pic/005akbps);
+	height: 800px;
+	background-size: cover;
+}
+
 #details {
 	border-color: white;
 	background-color: rgba(255, 255, 255, 0.5);
-	width: 400px;
+	width: 500px;
 	margin-left: 450px;
 	text-align: left;
 	color: black;
@@ -32,6 +38,8 @@
 #signup {
 	background: url(http://vignette1.wikia.nocookie.net/buffy/images/1/17/Older_and_far_away_.jpg);
 	height: 800px;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 #indexA { 
@@ -63,6 +71,12 @@
 	color: black;
 }
 
+#inOrOut {
+	position: absolute;
+	left: 15px;
+	top: 20px;
+}
+
 li {
 	color: white;
 	font-family: helvetica;
@@ -87,8 +101,9 @@ a {
 	text-decoration: none;
 }
 
-
-
+/*background-size: cover
+background-repeat: no-repeat*/
+/*html and body should have 100 percent height */
 
 
 

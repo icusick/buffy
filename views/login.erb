@@ -1,4 +1,5 @@
 <div id="login">
+<% if !@user %>
 <h1>Log in!</h1>
 <form method="POST" action="/sessions">
   <label for="name">Username:</label>
@@ -7,4 +8,13 @@
   <input type="password" name="password" id="password" placeholder="Your password">
   <button>Log In</button>
 </form>
+
+<% else %> 
+<h1>Log out!</h1>
+<form action="/sessions" method="POST">
+        <input type="hidden" name="_method" value="delete">
+        <button id="#indexA">Log out!</button>
+ </form>
+
+ <% end %>
 </div>

@@ -14,6 +14,10 @@
 <a href="/apocolypses" id="indexA">Apocolypses</a>
 
 <a href="/users" id="indexA">Users</a>
+<% if !@user %>
 <a href="/login" id="indexA">Log In</a>
+<% else %>
+<a href="/login" id="indexA">Log Out</a>
+<% end %>
 <a href="/users/new" id="indexA">Sign Up!</a>
 </div>

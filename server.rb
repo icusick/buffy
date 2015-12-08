@@ -6,10 +6,12 @@ module App
    $markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
 
    get "/" do 
+   	@user = User.find(session[:user_id]) if session[:user_id]
    	erb :index
    end 
 
    get "/login" do
+   	@user = User.find(session[:user_id]) if session[:user_id]
    	erb :login
    end
  
@@ -21,6 +23,11 @@ module App
       else
         redirect to "/login"
       end
+    end
+
+    delete "/sessions" do
+      session[:user_id] = nil
+      redirect to "/"
     end
    
    get "/users" do 
@@ -62,6 +69,7 @@ module App
    post "/articles" do 
    	newArticle = Article.create({title: params["title"], create_date: DateTime.now, plot: params["plot"], bio: params["bio"], antagonist: params["antagonist"], special_powers: params["special_powers"], minions: params["minions"], buffy_quarrel: params["buffy_quarrel"], demise: params["demise"], category_id: params["category_id"]})
    	newArticle.users.push(User.find(session[:user_id]))
+   	newArticle.quotes.push(Quote.create({content: params["content"]}))
    	redirect to "/"
    end
    

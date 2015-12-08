@@ -1,17 +1,19 @@
+<div id="detailWrap">
 <div id="details">
 
 	<h1> Name: </h1>
 	 <h2> <%= @article.title %> </h2>
 
-<% if @article.category_id == 1 %>
+<% if @article.category_id == 1 || @article.category_id == 4 %>
 	<h1> Plot: </h1> 
+
 	 <h2> <%= $markdown.render(@article.plot) %> </h2>
 <% end %>
 <% if @article.category_id == 2 || @article.category_id == 3 %>
 	<h1> Biography: </h1> 
 	 <h2> <%= $markdown.render(@article.bio) %> </h2>
 <% end %>
-<% if @article.category_id == 2 %>
+<% if @article.category_id == 1 || @article.category_id == 4 %>
 	<h1> Big Bad: </h1>
 	<h2> <%= @article.antagonist %> </h2>
 <% end %>
@@ -19,7 +21,7 @@
 	<h1> Special Powers: </h1>
 	 <h2> <%= $markdown.render(@article.special_powers) %> </h2>
 <% end %>
-<% if @article.category_id == 2 || @article.category_id == 3 %> 
+<% if @article.category_id == 3 %> 
 	<h1> Minions: </h1>
 	 <h2> <%= @article.minions %> </h2>
 <% end %>
@@ -27,7 +29,7 @@
 	<h1> Quarrel with Buffy: </h1>
 	 <h2> <%= $markdown.render(@article.buffy_quarrel) %> </h2>
 <% end %>
-<% if @article.category_id == 2 || @article.category_id == 3 %>
+<% if @article.category_id == 3 %>
 	<h1> Death: </h1>
 	 <h2> <%= $markdown.render(@article.demise) %> </h2>
 <% end %>
@@ -43,8 +45,10 @@
 	<% @article.quotes.each do |quote| %>
 		<h2><%= quote.content %></h2>
 	<% end %>
+	
 
 <a href="/articles/<%= @article.id %>/edit">Edit</a>
+</div>
 </div>
 
 

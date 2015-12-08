@@ -6,6 +6,7 @@ source "https://rubygems.org"
 gem "sinatra"
 gem "activerecord"
 gem "redcarpet"
+gem "bcrypt"
 
 
 group :development do 

@@ -11,8 +11,15 @@
 </head>
 <body>
   <div class="wrapper">
-    <%= yield %>
-    <p><a href="/">Home</a></p>
+  	<div id="inOrOut">
+  		<% if !@user %>
+	<a href="/login" id="indexA">Log In</a>
+<% else %>
+	<a href="/login" id="indexA">Log Out</a>
+<% end %>
+  	</div>
+    	<%= yield %>
+    	<p><a href="/">Home</a></p>
   </div>
 </body>
 </html>
