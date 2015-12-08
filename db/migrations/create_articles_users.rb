@@ -5,7 +5,7 @@ class CreateArticlesUsers <ActiveRecord::Migration
 		create_table :articles_users, id: false do |t|
 			t.integer(:article_id)
 			t.integer(:user_id)
-			t.datetime(:created_at)
+			
 		end
 	
 
@@ -13,7 +13,7 @@ class CreateArticlesUsers <ActiveRecord::Migration
 	end
 	def down
 		
-		drop_table :visits
+		drop_table :articles_users
 	end 
 end
 

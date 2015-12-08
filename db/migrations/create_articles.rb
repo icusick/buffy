@@ -21,7 +21,7 @@ class CreateUsers <ActiveRecord::Migration
 	end
 	def down
 		puts "undo"
-		drop_table :users
+		drop_table :articles
 	end 
 end
 

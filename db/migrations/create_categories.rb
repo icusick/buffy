@@ -12,7 +12,7 @@ class CreateCategories <ActiveRecord::Migration
 	end
 	def down
 		puts "undo"
-		drop_table :users
+		drop_table :categories
 	end 
 end
 
