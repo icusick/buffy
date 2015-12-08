@@ -17,4 +17,4 @@ class CreateArticlesUsers <ActiveRecord::Migration
 	end 
 end
 
-CreateArticlesUsers.migrate(:up)
+CreateArticlesUsers.migrate(ARGV[0])

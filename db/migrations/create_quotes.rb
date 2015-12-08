@@ -16,4 +16,4 @@ class CreateQuotes <ActiveRecord::Migration
 	end 
 end
 
-CreateQuotes.migrate(:up)
+CreateQuotes.migrate(ARGV[0])

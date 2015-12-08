@@ -25,7 +25,7 @@ class CreateUsers <ActiveRecord::Migration
 	end 
 end
 
-CreateUsers.migrate(:up)
+CreateUsers.migrate(ARGV[0])
 
 
 

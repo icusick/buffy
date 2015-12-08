@@ -17,4 +17,4 @@ class CreateArticlesQuotes <ActiveRecord::Migration
 	end 
 end
 
-CreateArticlesQuotes.migrate(:up)
+CreateArticlesQuotes.migrate(ARGV[0])
