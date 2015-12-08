@@ -4,7 +4,7 @@ class CreateArticlesQuotes <ActiveRecord::Migration
 	def up 
 		create_table :articles_quotes, id: false do |t|
 			t.integer(:article_id)
-			t.integer(:user_id)
+			t.integer(:quote_id)
 			
 		end
 	

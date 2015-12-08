@@ -1,6 +1,6 @@
 require_relative "../config"
 
-class CreateUsers <ActiveRecord::Migration 
+class CreateArticles <ActiveRecord::Migration 
 	def up 
 		create_table :articles do |t|
 			t.string(:title)
@@ -25,7 +25,7 @@ class CreateUsers <ActiveRecord::Migration
 	end 
 end
 
-CreateUsers.migrate(ARGV[0])
+CreateArticles.migrate(ARGV[0])
 
 
 
